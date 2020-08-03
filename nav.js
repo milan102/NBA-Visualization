@@ -1,4 +1,4 @@
-document.write(`<nav class="navbar navbar-expand-lg navbar-light bg-light">
+document.write(`<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <a class="navbar-brand" href="#">
     <img src="images/d3.png" width="30" height="30" alt="" loading="lazy">
   </a>
