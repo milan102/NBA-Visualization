@@ -21,7 +21,7 @@
         <div class="col text-center">
           <p>Lets explore data from the 2018-2019 NBA season to discover the relationship between top scoring players and top scoring teams</p>
           <p>First lets look at the top scoring teams, here they are in order from highest scoring to lowest scoring</p>
-          <p class="bold-text">All values are totals</p>
+          <p class="bold-text">Note: All values are totals</p>
         </div>
       </div>
 
@@ -156,12 +156,13 @@
           .attr("height", y.bandwidth() )
           .attr("fill", "#699fb3")
           .on("mouseover", function(d) {
+             var pointsPerGame = parseFloat(d.PTS/82).toFixed(2);
              document.getElementById("hover1").innerText = "Field Goals Attempted: " + d.FGA;
              document.getElementById("hover2").innerText = "Field Goals Made: " + d.FG;
              document.getElementById("hover3").innerText = "Free Throws Attempted: " + d.FTA;
              document.getElementById("hover4").innerText = "Free Throws Made: " + d.FT;
              document.getElementById("hover5").innerText = "Assists: " + d.AST;
-             document.getElementById("hover6").innerText = "Viewing information for: " + d.Team;
+             document.getElementById("hover6").innerText = "Viewing information for: " + d.Team + " who averaged " + pointsPerGame + " points per game";
           })
           .on("mouseout", function(d) {
             // do nothing
