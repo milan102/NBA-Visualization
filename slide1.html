@@ -16,10 +16,22 @@
 
     <div class="container">
 
+
       <div class="row">
         <div class="col text-center">
           <p>Lets explore data from the 2018-2019 NBA season to discover the relationship between top scoring players and top scoring teams</p>
           <p>First lets look at the top scoring teams, here they are in order from highest scoring to lowest scoring</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col text-center">
+          <button type="button" class="btn btn-success" id="hover1">(hover)</button>
+          <button type="button" class="btn btn-danger" id="hover2">(on)</button>
+          <button type="button" class="btn btn-warning" id="hover3">(the)</button>
+          <button type="button" class="btn btn-info" id="hover4">(chart)</button>
+          <button type="button" class="btn btn-dark" id="hover5">(to view more info)</button>
+          <p id="hover6"></p>
         </div>
       </div>
 
@@ -70,7 +82,7 @@
 
       </div>
 
-      <div class="row">
+      <div class="row" id="bottom">
         <div class="col text-center">
           <a class="btn btn-secondary" role="button" href="index.html">Previous</a>
           <a class="btn btn-primary" role="button" href="slide2.html">Next</a>
@@ -143,10 +155,15 @@
           .attr("height", y.bandwidth() )
           .attr("fill", "#699fb3")
           .on("mouseover", function(d) {
-            console.log("helllllllo" + d.Team)
+             document.getElementById("hover1").innerText = "Field Goals Attempted: " + d.FGA;
+             document.getElementById("hover2").innerText = "Field Goals Made: " + d.FG;
+             document.getElementById("hover3").innerText = "Free Throws Attempted: " + d.FTA;
+             document.getElementById("hover4").innerText = "Free Throws Made: " + d.FT;
+             document.getElementById("hover5").innerText = "Assists: " + d.AST;
+             document.getElementById("hover6").innerText = "Viewing information for: " + d.Team;
           })
           .on("mouseout", function(d) {
-            console.log("helllllllo" + d.PTS)
+            // do nothing
           })
 
           // Y2 axis
