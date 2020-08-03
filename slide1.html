@@ -59,11 +59,6 @@
 
       d3.csv("https://raw.githubusercontent.com/milan102/NBA-Visualization/master/data/team-total.csv").then(function(data) {
         // X axis
-        /*var x = d3.scaleLinear()
-          .domain([0, 9700])
-          .range([0, width]);
-          */
-
         var x = d3.scalePow()
           .exponent(10)
           .domain([0, 9700])
