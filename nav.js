@@ -11,13 +11,13 @@ document.write(`<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-t
         <a class="nav-link" href="index.html">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="slide1.html">Slide 1</a>
+        <a class="nav-link" href="slide1.html">Slide 1 (Teams)</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="slide2.html">Slide 2</a>
+        <a class="nav-link" href="slide2.html">Slide 2 (Players)</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="slide3.html">Slide 3</a>
+        <a class="nav-link" href="slide3.html">Slide 3 (Conclusions)</a>
       </li>
     </ul>
   </div>
